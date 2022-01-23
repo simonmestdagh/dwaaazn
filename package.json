@@ -1,0 +1,27 @@
+{
+  "name": "redis-pull-messages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "demo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "producer": "ts-node redis/producer.ts",
+    "consumer": "ts-node redis/consumer.ts",
+    "stats": "ts-node redis/statistics.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^13.1.6",
+    "@types/yargs": "^15.0.7",
+    "dotenv": "^8.2.0",
+    "tedis": "^0.1.12",
+    "ts-node": "^9.0.0",
+    "typescript": "^3.7.4",
+    "yargs": "^16.0.3"
+  }
+}
